@@ -7,10 +7,23 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint --config .eslintrc.cjs --cache --ext .ts,.js,.vue,.yaml,.json . && npm run lint:prettier",
+    "lint:fix": "eslint --config .eslintrc.cjs --cache --ext .ts,.js,.vue,.yaml,.json --fix . && prettier --write --cache --list-different .",
+    "lint:prettier": "prettier --check --cache ."
   },
   "dependencies": {
+    "@nuxt/types": "^2.18.1",
+    "@nuxt/typescript-build": "^3.0.2",
+    "@nuxt/ui": "^3.1.3",
+    "@nuxtjs/eslint-config-typescript": "^12.1.0",
+    "eslint": "^8.57.1",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-jsonc": "^2.20.1",
+    "eslint-plugin-prettier": "^5.4.1",
+    "eslint-plugin-yml": "^1.18.0",
     "nuxt": "^3.17.4",
+    "prettier": "^3.5.3",
     "vue": "^3.5.15",
     "vue-router": "^4.5.1"
   }

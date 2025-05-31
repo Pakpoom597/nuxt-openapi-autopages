@@ -1,0 +1,4 @@
+.nuxt
+.output
+tsconfig.json
+.eslintrc.cjs
