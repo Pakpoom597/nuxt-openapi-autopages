@@ -1,3 +1,7 @@
+# nuxt-openapi-autopages
+
+A Nuxt.js module that auto-generates pages and UI components based on your OpenAPI specification. Streamline frontend development by turning API definitions into dynamic, ready-to-use views.
+
 # Nuxt Minimal Starter
 
 Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
