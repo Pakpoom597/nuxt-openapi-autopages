@@ -12,6 +12,6 @@ export default defineEventHandler(async (event) => {
   const openApiDoc = parse(rawYaml);
   const dereferenced = await SwaggerParser.dereference(openApiDoc);
   return {
-    message: `Hello from Nuxt 3 API! ${domainName} ${JSON.stringify(dereferenced)}`,
+    data: dereferenced,
   };
 });
