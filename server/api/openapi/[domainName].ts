@@ -2,8 +2,9 @@ import { readFileSync } from "fs";
 import { join } from "path";
 import { parse } from "yaml";
 import SwaggerParser from "@apidevtools/swagger-parser";
+import { getRouterParam } from "h3";
 export default defineEventHandler(async (event) => {
-  const { domainName } = event.context.params;
+  const domainName = getRouterParam(event, "domainName");
   const filePath = join(
     process.cwd(),
     `assets/openapi/example/${domainName}.yaml`,

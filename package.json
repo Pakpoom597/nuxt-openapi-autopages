@@ -10,7 +10,8 @@
     "postinstall": "nuxt prepare",
     "lint": "eslint --config .eslintrc.cjs --cache --ext .ts,.js,.vue,.yaml,.json . && npm run lint:prettier",
     "lint:fix": "eslint --config .eslintrc.cjs --cache --ext .ts,.js,.vue,.yaml,.json --fix . && prettier --write --cache --list-different .",
-    "lint:prettier": "prettier --check --cache ."
+    "lint:prettier": "prettier --check --cache .",
+    "typecheck": "nuxi typecheck"
   },
   "dependencies": {
     "@apidevtools/swagger-parser": "^12.0.0",
@@ -28,5 +29,8 @@
     "vue": "^3.5.15",
     "vue-router": "^4.5.1",
     "yaml": "^2.8.0"
+  },
+  "devDependencies": {
+    "vue-tsc": "^2.2.10"
   }
 }
