@@ -11,4 +11,7 @@ export default defineNuxtConfig({
     typeCheck: true,
     strict: true,
   },
+  imports: {
+    dirs: ["./utils/types/*.type.ts"],
+  },
 });

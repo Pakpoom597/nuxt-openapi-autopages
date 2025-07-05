@@ -1,0 +1,15 @@
+export type TMethod =
+  | "get"
+  | "head"
+  | "patch"
+  | "post"
+  | "put"
+  | "delete"
+  | "options"
+  | "GET"
+  | "HEAD"
+  | "PATCH"
+  | "POST"
+  | "PUT"
+  | "DELETE"
+  | "OPTIONS";

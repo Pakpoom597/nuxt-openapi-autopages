@@ -1,6 +1,11 @@
 import type { OpenAPI } from "openapi-types";
 interface openApiDoc {
-  data: OpenAPI.Document;
+  data: OpenAPI.Document & {
+    servers: {
+      url: string;
+      description: string;
+    }[];
+  };
 }
 
 export default (domainName: string) => {

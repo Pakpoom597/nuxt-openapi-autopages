@@ -4,6 +4,10 @@ info:
   version: 1.0.0
   description: API to manage users
 
+servers:
+  - url: http://localhost:3000/api/mock
+    description: Development server
+
 paths:
   /users:
     get:
@@ -44,6 +48,36 @@ paths:
                     status:
                       type: string
                       enum: [ACTIVE, INACTIVE]
+              examples:
+                allUsers:
+                  summary: A list of users
+                  value:
+                    - id: "1"
+                      firstName: "Alice"
+                      lastName: "Smith"
+                      email: "alice@example.com"
+                      status: "ACTIVE"
+                    - id: "2"
+                      firstName: "Bob"
+                      lastName: "Johnson"
+                      email: "bob@example.com"
+                      status: "INACTIVE"
+                activeUsers:
+                  summary: active users
+                  value:
+                    - id: "1"
+                      firstName: "Alice"
+                      lastName: "Smith"
+                      email: "alice@example.com"
+                      status: "ACTIVE"
+                inactiveUsers:
+                  summary: inactive users
+                  value:
+                    - id: "2"
+                      firstName: "Bob"
+                      lastName: "Johnson"
+                      email: "bob@example.com"
+                      status: "INACTIVE"                                                                   
 
     post:
       summary: Create a new user
